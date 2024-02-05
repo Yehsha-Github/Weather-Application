@@ -12,6 +12,9 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind-speed");
   windElement.innerHTML = response.data.wind.speed;
 
+  let icon = document.querySelector("#icon");
+  icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
+
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.city;
 }
