@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="function/Style.css" />
     <title>Weather</title>
 </head>
@@ -11,30 +12,44 @@
 <body>
     <div class=" main-body">
         <header>
-            <form>
-                <input type="search" placeholder="Enter City" required class="search-box" id="search-input" />
+            <form id="search-form">
+                <input type="search" placeholder="Enter City" required class="search-box" id="input-city" />
                 <input type="submit" value="Search" class="search-button" />
             </form>
         </header>
         <main>
             <h1 class="city">
                 What is the weather today?
-            </h1>
+            </h1> </br>
             <h2 class="date">03/02/2024</h2>
             <h3 class="time">12.00am</h3>
-            <p>
-                Weather description
-                Temperature
-                Humidity
-                Wind speed
-            </p>
+
+            <div class="row">
+                <div class="col">
+                    Weather description <br />
+                    <strong> </strong>
+                </div>
+                <div class="col">
+                    Temperature <br />
+                    <span id="weather-icon">🌞</span> <strong><span id="temperature">°C</span></strong>
+                </div>
+                <div class="col">
+                    Humidity <br />
+                    <strong> %</strong>
+                </div>
+                <div class="col">
+                    Wind speed <br />
+                    <strong> Kms</strong>
+
+                </div>
+            </div>
         </main>
         <footer> Coded by <a href="https://github.com/Yehsha-Github" target="_blank">Yehsha</a>, hosted on <a
                 href="https://fascinating-weather-06159d.netlify.app">Netlify</a> ,and code
             available on <a href="https://github.com/Yehsha-Github/Weather-Application" target="_blank">GitHub</a>
         </footer>
     </div>
-    <script>  </script>
+    <script src="function/Script.js"></script>
 </body>
 
 </html>

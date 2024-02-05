@@ -1,12 +1,11 @@
 body {
   background: linear-gradient(
     135deg,
-    #0f3542,
-    #346d88,
-    #53a0b0,
-    #8dbbb8,
-    #ebba8f,
-    #de8c66
+    #2063a5,
+    #2f9de2,
+    #2c8ed1,
+    #e3b78a,
+    #c86b66
   );
 }
 
@@ -31,6 +30,7 @@ header {
   width: 80%;
   font-size: 16px;
   padding: 15px 20px;
+  font-family: "Franklin Gothic";
 }
 
 .search-button {
@@ -41,4 +41,53 @@ header {
   border-radius: 40px;
   color: gray;
   font-size: 16px;
+  font-family: "Franklin Gothic";
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+h2,
+h3 {
+  font-size: 1.5em;
+}
+
+h1,
+h2,
+h3 {
+  margin-block-start: 30px;
+  font-weight: 500;
+  color: #007cb9;
+  display: inline;
+  padding-inline-start: 10px;
+  padding-inline-end: 35px;
+}
+
+.row {
+  display: inline-flex;
+  font-size: 1.3em;
+  color: #007cb9;
+  list-style: none;
+  text-align: center;
+}
+
+.col {
+  padding: 20px;
+}
+
+.col:hover {
+  background-color: rgb(250, 225, 186);
+  transition: all 200ms ease-in;
+  border-radius: 40px;
+  padding: 30px;
+  margin: 40px;
+}
+
+footer {
+  border-top: 1px solid #f9f7fe;
+  padding: 30px 0 0 0;
+  text-align: center;
+  font-size: 12px;
+  font-family: "Franklin Gothic";
 }
