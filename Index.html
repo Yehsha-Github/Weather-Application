@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="function/Style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
     <title>Weather</title>
 </head>
 
@@ -18,7 +24,7 @@
             </form>
         </header>
         <main>
-            <h1 class="city">
+            <h1 id="city">
                 What is the weather today?
             </h1> </br>
             <h2 class="date">03/02/2024</h2>
@@ -31,9 +37,12 @@
                 </div>
                 <div class="col">
                     Temperature <br />
-                    <span id="weather-icon">🌞 </span><span class="temperature" id="temperature"> 8</span> <span
-                        class="units"> <a href="# " id="celsius">°C
-                        </a> / <a href="# " id="farenheit"> ℉ </a> </span>
+                    <span id="weather-icon">🌞</span>
+                    <span class="temperature" id="temperature">8</span>
+                    <span class="units">
+                        <a href="# " id="celsius">°C</a>/
+                        <a href="# " id="farenheit">℉</a>
+                    </span>
                 </div>
                 <div class="col" id="humidity">
                     Humidity <br />

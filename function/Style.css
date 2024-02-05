@@ -66,10 +66,11 @@ h3 {
 
 .row {
   display: inline-flex;
-  font-size: 1.3em;
+  font-size: 1.2em;
   color: #007cb9;
   list-style: none;
   text-align: center;
+  font-family: "Playfair Display";
 }
 
 .col {
@@ -82,6 +83,8 @@ h3 {
   border-radius: 40px;
   padding: 30px;
   margin: 40px;
+  font-family: "Crimson Text";
+  font-size: 1.4em;
 }
 
 footer {
