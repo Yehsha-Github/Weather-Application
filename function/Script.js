@@ -47,7 +47,15 @@ function currentDate() {
   if (hours < 10) {
     hours = `0 ${hours}`;
   }
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tueday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   let day = days[now.getDay()];
 
   let months = [
@@ -70,6 +78,31 @@ function currentDate() {
   h3.innerHTML = `${hours}:${minutes}`;
 }
 currentDate();
+
+function displayForecast() {
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `  <div class="forecast-day">
+    <span class="forecast-date">${day}</span> <br />
+    <span class="forecast-icon">🌞</span>
+    <div class="forecast-temp">
+      <span class="forecast-temp-min">10°C</span>
+      <strong>
+        <span class="forecast-temp-max">20°C</span>
+      </strong>
+    </div>
+  </div>`;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
+displayForecast();
 
 function convertToFarenheit(event) {
   event.preventDefault();

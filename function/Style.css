@@ -64,6 +64,26 @@ h3 {
   padding-inline-end: 35px;
 }
 
+.weather-forecast {
+  display: flex;
+  font-size: 1.2em;
+  color: #007cb9;
+  text-align: center;
+  font-family: "Playfair Display";
+}
+.forecast-day {
+  padding: 20px;
+  padding-top: 0px;
+  line-height: 20px;
+  justify-content: space-around;
+}
+
+.forecast-icon {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+}
 .row {
   display: inline-flex;
   font-size: 1.2em;
@@ -75,6 +95,7 @@ h3 {
 
 .col {
   padding: 20px;
+  padding-bottom: 10px;
 }
 
 .col:hover {
@@ -90,6 +111,11 @@ h3 {
 .weather-app-icon {
   width: 60px;
   height: 60px;
+}
+
+.forecast-temp-min {
+  font-size: 0.9em;
+  color: #2f9de2;
 }
 
 footer {
