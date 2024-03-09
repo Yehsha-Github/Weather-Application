@@ -98,9 +98,14 @@ h3 {
 }
 
 .forecast-day:hover {
-  background-color: #e1b68a;
+  background-color: #ffc9a5;
   padding: 20px;
   margin: 5px;
+}
+
+.forecast-icon:hover {
+  width: 70px;
+  height: 70px;
 }
 
 .weather-forecast {
