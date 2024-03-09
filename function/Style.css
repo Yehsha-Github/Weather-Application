@@ -86,7 +86,8 @@ h3 {
   padding: 20px;
 }
 
-.col:hover {
+.col:hover,
+.forecast-day:hover {
   background-color: rgb(250, 225, 186);
   transition: all 200ms ease-in;
   border-radius: 40px;
@@ -96,18 +97,24 @@ h3 {
   font-size: 1.4em;
 }
 
+.forecast-day:hover {
+  background-color: #e1b68a;
+  padding: 20px;
+  margin: 5px;
+}
+
 .weather-forecast {
   display: flex;
+  margin: 0 0 0 20px;
   font-size: 1.2em;
   color: #007cb9;
   text-align: center;
   font-family: "Playfair Display";
 }
 .forecast-day {
+  background-color: rgb(250, 225, 186);
   margin: 5px;
-  padding: 8px;
-  line-height: 20px;
-  background: rgb(250, 225, 186);
+  padding: 10px;
   border-radius: 20px;
 }
 
