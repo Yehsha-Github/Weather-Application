@@ -17,6 +17,8 @@ function displayTemperature(response) {
 
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.city;
+
+  getForecast(response.data.city);
 }
 
 function search(event) {
@@ -79,30 +81,48 @@ function currentDate() {
 }
 currentDate();
 
-function displayForecast() {
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+function getForecast(city) {
+  let apiKey = "6be84de62317f4eocff0cd120tf40fa4";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function forecastDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+
   let forecastHtml = "";
 
-  days.forEach(function (day) {
+  response.data.daily.forEach(function (day) {
     forecastHtml =
       forecastHtml +
       `  <div class="forecast-day">
-    <span class="forecast-date">${day}</span> <br />
-    <span class="forecast-icon">🌞</span>
+    <span class="forecast-date">${forecastDay(day.time)}</span> <br />
+    <span>
+    <img src = "${day.condition.icon_url}" class="forecast-icon"/>
+    </span>
     <div class="forecast-temp">
-      <span class="forecast-temp-min">10°C</span>
-      <strong>
-        <span class="forecast-temp-max">20°C</span>
-      </strong>
+      <span class="forecast-temp-min">${Math.round(
+        day.temperature.minimum
+      )}°C</span>
+      
+        <span class="forecast-temp-max">${Math.round(
+          day.temperature.maximum
+        )}°C</span>
     </div>
+    <span class= "forcast-humidity">${(day.temperature.humidity)}%💧</span>
   </div>`;
   });
 
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
-
-displayForecast();
 
 function convertToFarenheit(event) {
   event.preventDefault();

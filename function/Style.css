@@ -7,20 +7,21 @@ body {
     #e3b78a,
     #c86b66
   );
+  min-height: 500px;
 }
 
 .main-body {
   background: rgb(250, 243, 231);
-  max-width: 600px;
+  max-width: 650px;
   margin: 45px auto;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   border-radius: 16px;
-  padding: 30px;
+  padding: 20px 30px 30px;
 }
 
 header {
   border-bottom: 1px solid #f9f7fe;
-  padding: 30px 0;
+  padding: 10px 0 30px;
 }
 
 .search-box {
@@ -44,6 +45,10 @@ header {
   font-family: "Franklin Gothic";
 }
 
+main {
+  padding-top: 20px;
+}
+
 h1 {
   font-size: 1.8em;
 }
@@ -60,30 +65,14 @@ h3 {
   font-weight: 500;
   color: #007cb9;
   display: inline;
-  padding-inline-start: 110px;
-  padding-inline-end: 35px;
+  padding: 0 35px 20px 110px;
 }
 
-.weather-forecast {
-  display: flex;
-  font-size: 1.2em;
-  color: #007cb9;
-  text-align: center;
-  font-family: "Playfair Display";
-}
-.forecast-day {
-  padding: 20px;
-  padding-top: 0px;
-  line-height: 20px;
-  justify-content: space-around;
+.weather-app-icon {
+  width: 60px;
+  height: 60px;
 }
 
-.forecast-icon {
-  width: 50px;
-  height: 50px;
-  display: block;
-  margin: 0 auto;
-}
 .row {
   display: inline-flex;
   font-size: 1.2em;
@@ -95,7 +84,6 @@ h3 {
 
 .col {
   padding: 20px;
-  padding-bottom: 10px;
 }
 
 .col:hover {
@@ -108,9 +96,26 @@ h3 {
   font-size: 1.4em;
 }
 
-.weather-app-icon {
-  width: 60px;
-  height: 60px;
+.weather-forecast {
+  display: flex;
+  font-size: 1.2em;
+  color: #007cb9;
+  text-align: center;
+  font-family: "Playfair Display";
+}
+.forecast-day {
+  margin: 5px;
+  padding: 8px;
+  line-height: 20px;
+  background: rgb(250, 225, 186);
+  border-radius: 20px;
+}
+
+.forecast-icon {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
 }
 
 .forecast-temp-min {
@@ -120,7 +125,7 @@ h3 {
 
 footer {
   border-top: 1px solid #f9f7fe;
-  padding: 30px 0 0 0;
+  padding: 30px 0 0;
   text-align: center;
   font-size: 12px;
   font-family: "Franklin Gothic";
